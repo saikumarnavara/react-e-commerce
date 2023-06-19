@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState } from "react";
 import routes from "./routes";
+import Navbar from "./Components/Containers/NavBar/Navbar";
 import { FetchApiData } from "./services/apiService";
 export const store = createContext()
 function App() {
@@ -23,6 +24,7 @@ function App() {
   return (
     <div className="App">
       <store.Provider value={ContextValues}>
+        <Navbar />
         {routes}
       </store.Provider>
     </div>
