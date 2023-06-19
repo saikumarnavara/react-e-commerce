@@ -1,0 +1,18 @@
+.image-overlay{
+    position: absolute;
+    top:100%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+
+.image-overlay h1 {
+    font-size: 3rem;
+}
+
+@media(max-width:768){
+    .image-overlay h1{
+        font-size: 2rem;
+    }
+}

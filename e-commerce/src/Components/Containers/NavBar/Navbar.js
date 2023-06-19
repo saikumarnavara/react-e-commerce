@@ -4,10 +4,11 @@ import BrandingHeader from './BrandingHeader';
 import HeadNavBar from './HeadNavBar';
 const Navbar = () => {
     return (
-        <div>
+        <div className='navbar-container'>
             <BrandingHeader />
             <HeadNavBar />
-            <nav class="navbar navbar-expand-lg  navbar-light bg-light">
+            <nav class="navbar fixed-top navbar-expand-lg  navbar-light bg-light" style={{ marginTop: '70px' }}>
+
                 <div class="container-fluid">
                     <NavLink className="nav-link" exact to="/" activeClassName="active">
                         <img

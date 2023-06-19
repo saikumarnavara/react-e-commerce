@@ -3,7 +3,7 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { BsSearch } from "react-icons/bs";
 const HeadNavBar = () => {
     return (
-        <nav className='navbar navbar-expand-lg navbar-light' style={{ backgroundColor: 'white', marginBottom: '0px' }}>
+        <nav className='navbar fixed-top navbar-expand-lg navbar-light bg-light' style={{ marginBottom: '0px', marginTop: '18px' }}>
             <div className='container' style={{ height: '40px' }}>
                 <h2><BsSearch /></h2>
                 <a className='navbar-brand' href='/'>

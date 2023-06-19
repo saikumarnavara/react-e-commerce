@@ -5,11 +5,13 @@ import { FetchApiData } from "./services/apiService";
 export const store = createContext()
 function App() {
   const [data, setData] = useState(null);
+  const [menData, setMenData] = useState(null)
   useEffect(() => {
     const fetch = async () => {
       try {
         const data = await FetchApiData();
         setData(data)
+        setMenData(data)
       }
       catch (error) {
         console.error('fetching the data failed', error)
@@ -18,7 +20,7 @@ function App() {
     fetch();
   }, [])
 
-  const ContextValues = [data, setData]
+  const ContextValues = [data, setData, menData, setMenData]
 
 
   return (
