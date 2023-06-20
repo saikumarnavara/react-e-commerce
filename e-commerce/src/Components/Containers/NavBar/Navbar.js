@@ -5,9 +5,9 @@ import HeadNavBar from './HeadNavBar';
 const Navbar = () => {
     return (
         <div className='navbar-container'>
-            <BrandingHeader />
+            {/* <BrandingHeader /> */}
             <HeadNavBar />
-            <nav class="navbar fixed-top navbar-expand-lg  navbar-light bg-light" style={{ marginTop: '70px' }}>
+            <nav class="navbar fixed-top navbar-expand-lg  navbar-light bg-light" style={{ marginTop: '50px' }}>
 
                 <div class="container-fluid">
                     <NavLink className="nav-link" exact to="/" activeClassName="active">
@@ -56,7 +56,7 @@ const Navbar = () => {
                                     activeClassName="active"
                                     style={{ fontWeight: 700, fontSize: "20px" }}
                                 >
-                                    Men's Clothing
+                                    Men Fashion
                                 </NavLink>
                             </li>
                             <li class="nav-item">
@@ -67,7 +67,7 @@ const Navbar = () => {
                                     activeClassName="active"
                                     style={{ fontWeight: 700, fontSize: "20px" }}
                                 >
-                                    Women Clothing
+                                    Women Fashion
                                 </NavLink>
                             </li>
                             <li class="nav-item">

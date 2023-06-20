@@ -1,7 +1,24 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { store } from '../../../App'
+import { cartStore } from '../../../App'
 import { SortTitle } from '../../../Utils/Utils'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const MenCards = (props) => {
-    console.log('eee', props.data)
+    const [clickedId, setClickedId] = useState([])
+    const [cartId, setCardId, setCartItemCount] = useContext(cartStore)
+    const AddCartItem = (props) => {
+        setClickedId([...clickedId, props])
+        setCardId([...cartId, props])
+
+        toast('Item Added to cart', {
+            type: 'success',
+            theme: 'dark',
+            position: 'bottom-center',
+            autoClose: 2000
+        })
+    }
+
     return (
         <div style={{ marginTop: '140px' }}>
             <h1 class='text-center text-success '>Men's Fashion</h1>
@@ -20,9 +37,9 @@ const MenCards = (props) => {
                                         ${item.price}
                                     </p>
                                     <p class='card-text'>
-
                                         {item.rating}
                                     </p>
+                                    <button class='btn btn-primary' onClick={() => AddCartItem(item.id)}>Add to cart</button>
                                 </div>
                             </div>
                         </div>
@@ -30,7 +47,7 @@ const MenCards = (props) => {
 
                 </div>
 
-
+                <ToastContainer />
             </div>
         </div>
     )
