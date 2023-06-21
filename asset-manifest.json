@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/saikumarnavara/react-e-commerce/static/css/main.44d9dce0.css",
-    "main.js": "/saikumarnavara/react-e-commerce/static/js/main.475a3c63.js",
+    "main.js": "/saikumarnavara/react-e-commerce/static/js/main.dcbeaccf.js",
     "static/js/787.46493d11.chunk.js": "/saikumarnavara/react-e-commerce/static/js/787.46493d11.chunk.js",
     "static/media/modelGirl.png": "/saikumarnavara/react-e-commerce/static/media/modelGirl.df7d01e1fe01d90d5ec5.png",
     "static/media/modelimage3.jpg": "/saikumarnavara/react-e-commerce/static/media/modelimage3.5d48eda1c372d966b87c.jpg",
@@ -10,11 +10,11 @@
     "static/media/shopping_logo.png": "/saikumarnavara/react-e-commerce/static/media/shopping_logo.b533b2222af3071682a8.png",
     "index.html": "/saikumarnavara/react-e-commerce/index.html",
     "main.44d9dce0.css.map": "/saikumarnavara/react-e-commerce/static/css/main.44d9dce0.css.map",
-    "main.475a3c63.js.map": "/saikumarnavara/react-e-commerce/static/js/main.475a3c63.js.map",
+    "main.dcbeaccf.js.map": "/saikumarnavara/react-e-commerce/static/js/main.dcbeaccf.js.map",
     "787.46493d11.chunk.js.map": "/saikumarnavara/react-e-commerce/static/js/787.46493d11.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.44d9dce0.css",
-    "static/js/main.475a3c63.js"
+    "static/js/main.dcbeaccf.js"
   ]
 }
