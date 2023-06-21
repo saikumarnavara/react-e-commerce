@@ -1,12 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { store } from '../../../App'
 import { cartStore } from '../../../App'
 import { SortTitle } from '../../../Utils/Utils'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const MenCards = (props) => {
     const [clickedId, setClickedId] = useState([])
-    const [cartId, setCardId, setCartItemCount] = useContext(cartStore)
+    const [cartId, setCardId] = useContext(cartStore)
     const AddCartItem = (props) => {
         setClickedId([...clickedId, props])
         setCardId([...cartId, props])

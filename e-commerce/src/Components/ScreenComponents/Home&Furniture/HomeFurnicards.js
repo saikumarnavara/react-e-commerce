@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react'
-import { SortTitle } from '../../../Utils/Utils';
+import { cartStore } from '../../../App'
+import { SortTitle } from '../../../Utils/Utils'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { cartStore } from '../../../App';
-const WomenCards = (props) => {
+const HomeFurnicards = (props) => {
     const [clickedId, setClickedId] = useState([])
     const [cartId, setCardId] = useContext(cartStore)
     const AddCartItem = (props) => {
@@ -19,11 +19,11 @@ const WomenCards = (props) => {
     }
     return (
         <div style={{ marginTop: '140px' }}>
-            <h1 class='text-center text-success '>Women's Fashion</h1>
+            <h1 class='text-center text-success '>Home & Furniture</h1>
             <div class='container'>
                 <div class='row'>
 
-                    {props.WomenData?.map((item) => (
+                    {props?.hfData?.map((item) => (
                         <div key={item.id} class='col md-4 '>
                             <div class='card mb-3 d-flex align-items-center justify-content-center shadow' >
                                 <img src={item.thumbnail} class="card-img-top" alt={item.title} style={{ height: '200px', width: '200px' }} />
@@ -51,4 +51,4 @@ const WomenCards = (props) => {
     )
 }
 
-export default WomenCards
+export default HomeFurnicards

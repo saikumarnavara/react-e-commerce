@@ -79,31 +79,31 @@ const Navbar = () => {
                                     color="#2924a6"
                                     style={{ fontWeight: 700, fontSize: "20px" }}
                                 >
-                                    Mobile's
+                                    Electronics
                                 </NavLink>
                             </li>
                             <li class="nav-item">
                                 <NavLink
                                     className="nav-link"
                                     exact
-                                    to="/accessories"
+                                    to="/homefurniture"
                                     activeClassName="active"
                                     color="#2924a6"
                                     style={{ fontWeight: 700, fontSize: "20px" }}
                                 >
-                                    Accessories
+                                    Home & Furniture
                                 </NavLink>
                             </li>
                             <li class="nav-item">
                                 <NavLink
                                     className="nav-link"
                                     exact
-                                    to="/Fragnance"
+                                    to="/beauty"
                                     activeClassName="active"
                                     color="#2924a6"
                                     style={{ fontWeight: 700, fontSize: "20px" }}
                                 >
-                                    Fragnance's
+                                    Beauty & Grooming
                                 </NavLink>
                             </li>
 
