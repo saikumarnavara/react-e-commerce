@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const CartItems = (props) => {
     const [cartId, setCardId, setCartItemCount] = useContext(cartStore);
     const Products = props?.prodData;
-    const [cartData, setCartData] = useState(cartId)
+    const [cartData, setCartData] = useState(cartId);
     const [price, setPrice] = useState(0)
 
     const RemoveCartItems = (item) => {

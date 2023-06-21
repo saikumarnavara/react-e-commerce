@@ -6,6 +6,7 @@ import WomenScreen from "../Components/Screens/WomenScreen";
 import MobileScreen from "../Components/Screens/MobileScreen";
 import BeautyScreen from "../Components/Screens/BeautyScreen";
 import HomeFurnitureScreen from "../Components/Screens/HomeFurnitureScreen";
+import ViewProduct from "../Components/Screens/ViewProductScreen";
 import Cart from "../Components/Screens/Cart";
 const routes = (
     <React.Fragment>
@@ -16,6 +17,7 @@ const routes = (
             <Route path="/cart" element={<Cart />} />
             <Route path="/mobiles" element={<MobileScreen />} />
             <Route path="/beauty" element={<BeautyScreen />} />
+            <Route path="/viewproduct" element={<ViewProduct />} />
             <Route path="/homefurniture" element={<HomeFurnitureScreen />} />
         </Routes>
     </React.Fragment>

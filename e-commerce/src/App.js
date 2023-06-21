@@ -4,10 +4,12 @@ import Navbar from "./Components/Containers/NavBar/Navbar";
 import { FetchApiData } from "./services/apiService";
 export const store = createContext()
 export const cartStore = createContext()
+export const viewItem = createContext()
 function App() {
   const [data, setData] = useState(null);
   const [menData, setMenData] = useState(null)
   const [cartId, setCardId] = useState([])
+  const [viewProduct, setViewProduct] = useState('')
   useEffect(() => {
     const fetch = async () => {
       try {
@@ -21,13 +23,18 @@ function App() {
     fetch();
   }, [])
   const ContextValues = [data, setData, menData, setMenData]
-  const CartValues = [cartId, setCardId]
+  const CartValues = [cartId, setCardId,]
+  const viewProductVal = [viewProduct, setViewProduct]
+  console.log(viewProduct, 'app')
+
   return (
     <div className="App">
       <store.Provider value={ContextValues}>
         <cartStore.Provider value={CartValues}>
-          <Navbar />
-          {routes}
+          <viewItem.Provider value={viewProductVal}>
+            <Navbar />
+            {routes}
+          </viewItem.Provider>
         </cartStore.Provider>
       </store.Provider>
     </div>
