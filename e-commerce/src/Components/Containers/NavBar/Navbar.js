@@ -2,6 +2,8 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import BrandingHeader from './BrandingHeader';
 import HeadNavBar from './HeadNavBar';
+import shopping_logo from '../../../assests/favicon/shopping_logo.png'
+
 const Navbar = () => {
     return (
         <div className='navbar-container'>
@@ -12,11 +14,9 @@ const Navbar = () => {
                 <div class="container-fluid">
                     <NavLink className="nav-link" exact to="/" activeClassName="active">
                         <img
-                            src='..'
+                            src=''
                             alt=""
-                            width="50"
-                            height="44"
-                            color="#2924a6"
+                            style={{ width: '80px' }}
                         />
 
                     </NavLink>

@@ -27,7 +27,7 @@ const MobileCards = (props) => {
     }
     return (
         <div style={{ marginTop: '140px' }}>
-            <h1 class='text-center text-success '>Men's Fashion</h1>
+            <h1 class='text-center text-success '>Electronics</h1>
             <div class='container'>
                 <div class='row'>
 
