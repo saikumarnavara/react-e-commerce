@@ -3,6 +3,7 @@ import { AiFillDelete } from "react-icons/ai";
 import { cartStore } from '../../../App';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { NavLink } from 'react-router-dom';
 const CartItems = (props) => {
     const [cartId, setCardId, setCartItemCount] = useContext(cartStore);
     const Products = props?.prodData;
@@ -45,6 +46,7 @@ const CartItems = (props) => {
         return (
             <div class='container text-center my-5'>
                 <h1>Your cart is empty</h1>
+                <NavLink href='/home'><p>Go back..</p></NavLink>
             </div>
         )
     }

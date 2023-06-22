@@ -27,6 +27,7 @@ const MenCards = (props) => {
         setViewProduct(id)
         navigate('/viewproduct')
     }
+
     console.log(cartId, 'trhis add cart')
     console.log(viewProduct, 'sta')
     return (
@@ -37,7 +38,7 @@ const MenCards = (props) => {
                     {props?.data?.map((item) => (
                         <div key={item.id} class='col md-4 '>
                             <div class='card mb-3 d-flex align-items-center justify-content-center shadow' >
-                                <img src={item.thumbnail} class="card-img-top" onClick={() => { ViewProduct(item.id) }} alt={item.title} style={{ height: '200px', width: '200px' }} />
+                                <img src={item.thumbnail} class="card-img-top" onClick={() => { ViewProduct(item.id) }} alt={item.title} style={{ height: '200px', width: '200px', cursor: 'pointer' }} />
                                 <div class='card-body text-center' >
                                     <h6 class='card-title' style={{ marginBottom: '0px' }}>
                                         {item.brand}</h6>
