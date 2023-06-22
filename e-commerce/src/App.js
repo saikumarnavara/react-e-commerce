@@ -1,4 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
+import './App.css';
 import routes from "./routes";
 import Navbar from "./Components/Containers/NavBar/Navbar";
 import { FetchApiData } from "./services/apiService";

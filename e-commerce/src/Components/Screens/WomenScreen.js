@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import WomenCards from '../ScreenComponents/WomenFashion/WomenCards';
-import { store } from '../../App'
+import { store } from '../../App';
+import ScrollButton from '../Containers/ScrollToTop/ScrollUp';
 const WomenScreen = () => {
     const [data] = useContext(store)
     const WomenFashion = data;
@@ -14,7 +15,9 @@ const WomenScreen = () => {
     )
     return (
         <div>
+            <ScrollButton />
             <WomenCards WomenData={WomenCardsdata} />
+
         </div>
     )
 }

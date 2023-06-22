@@ -45,7 +45,7 @@ const ViewProduct = () => {
   return (
     <div style={{ marginTop: '120px' }}>
       <BrandingHeader />
-      <h2 onClick={Back} style={{ padding: '10px', cursor: 'pointer' }}><BiArrowBack /></h2>
+      <h2 onClick={Back} style={{ padding: '10px', cursor: 'pointer', display: 'flex' }}><BiArrowBack /></h2>
 
       {productsData?.map((product) => {
         if (product.id === ItemId) {
@@ -53,7 +53,7 @@ const ViewProduct = () => {
           return (
             <div className="container d-flex col sm-2" key={product.id}>
               <div className="container d-flex" style={{ width: '100px' }}>
-                <div className="card shadow my-2 ">
+                <div className="card shadow my-2">
                   {product.images?.map((image) => {
                     return (
                       <div className="col">
@@ -72,29 +72,28 @@ const ViewProduct = () => {
               </div>
               <div className="container">
                 <div className="card">
-                  <div className="card-body text-left">
+                  <div className="card-body" style={{ textAlign: 'left' }} >
                     <h1 className="card-title">{product.brand}</h1>
                     <h4 className="card-title">{product.title}</h4>
                     <p className="card-text">Category:- {product.category}</p>
                     <p className="card-text">{product.description}</p>
                     <Rating name="read-only" value={product.rating} readOnly />
-
                     <p className="card-text">Stock Available:-{product.stock}</p>
                     <h1 className="card-title">Price:- ${product.price}</h1>
                     <p className="card-text">Discount:- {product.discountPercentage}%</p>
                     <h6 className="card-text">Delivey Expect by:- {day} before {time}</h6>
                   </div>
-                  <div class="container">
+                  <div class="container" style={{ textAlign: 'left' }}>
                     <button class="btn btn-outline-primary btn-lg" style={{ marginRight: '5px' }}>Buy Now</button>
                     {cartId.includes(product.id) ? <button className='btn btn-outline-primary btn-lg' onClick={() => { navigate('/cart') }}>Go to cart</button> :
-                      <button class='btn btn-outline-primary btn-lg' onClick={() => AddCartItem(product.id)}>Add to cart</button>}
+                      <button class='btn btn-outline-primary btn-lg' onClick={() => AddCartItem(product.id)} style={{ marginRight: '5px' }}>Add to cart</button>}
+                    <button class="btn btn-outline-primary btn-lg" >Compare Product</button>
                   </div>
                 </div>
               </div>
             </div>
 
           )
-
         }
       })}
       <ToastContainer />

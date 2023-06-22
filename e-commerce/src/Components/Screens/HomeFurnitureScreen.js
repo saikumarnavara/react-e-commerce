@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { store } from '../../App';
-import HomeFurnicards from '../ScreenComponents/Home&Furniture/HomeFurnicards'
+import HomeFurnicards from '../ScreenComponents/Home&Furniture/HomeFurnicards';
+import ScrollButton from '../Containers/ScrollToTop/ScrollUp';
 const HomeFurnitureScreen = () => {
     const [data] = useContext(store)
     const HFdata = data;
@@ -15,6 +16,7 @@ const HomeFurnitureScreen = () => {
     return (
         <div>
             <HomeFurnicards hfData={HomeFurniture} />
+            <ScrollButton />
         </div>
     )
 }

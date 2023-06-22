@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { store } from '../../App'
-import BeautyCards from '../ScreenComponents/Beauty&Grooming/BeautyCards'
+import BeautyCards from '../ScreenComponents/Beauty&Grooming/BeautyCards';
+import ScrollButton from '../Containers/ScrollToTop/ScrollUp';
 const BeautyScreen = () => {
     const [data] = useContext(store)
     const BeautyProducts = data;
@@ -13,6 +14,7 @@ const BeautyScreen = () => {
     return (
         <div>
             <BeautyCards beauty={BeautyData} />
+            <ScrollButton />
         </div>
     )
 }

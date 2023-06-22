@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import MobileCards from '../ScreenComponents/Mobiles/MobileCards';
 import { store } from '../../App';
+import ScrollButton from '../Containers/ScrollToTop/ScrollUp';
 const MobileScreen = () => {
     const [data] = useContext(store)
     const mobiles = data;
@@ -13,6 +14,7 @@ const MobileScreen = () => {
     return (
         <div>
             <MobileCards MobilesData={mobilesData} />
+            <ScrollButton />
         </div>
     )
 }
