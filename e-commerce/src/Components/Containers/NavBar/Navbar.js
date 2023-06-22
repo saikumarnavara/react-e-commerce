@@ -12,13 +12,14 @@ const Navbar = () => {
             <nav class="navbar fixed-top navbar-expand-lg  navbar-light bg-light" style={{ marginTop: '50px' }}>
 
                 <div class="container-fluid">
-                    <NavLink className="nav-link" exact to="/" activeClassName="active">
-                        <img
+                    <NavLink className="nav-link" exact to="/" activeClassName="active"
+                        style={{ fontWeight: '700', fontSize: '26px' }}>
+                        {/* <img
                             src=''
                             alt=""
                             style={{ width: '80px' }}
-                        />
-
+                        /> */}
+                        BestBuy!
                     </NavLink>
 
                     <button
@@ -111,6 +112,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </nav>
+
         </div>
     )
 }

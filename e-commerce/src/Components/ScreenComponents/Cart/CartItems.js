@@ -3,8 +3,10 @@ import { AiFillDelete } from "react-icons/ai";
 import { cartStore } from '../../../App';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import BrandingHeader from '../../Containers/NavBar/BrandingHeader';
 const CartItems = (props) => {
+    const navigate = useNavigate();
     const [cartId, setCardId, setCartItemCount] = useContext(cartStore);
     const Products = props?.prodData;
     const [cartData, setCartData] = useState(cartId);
@@ -42,16 +44,24 @@ const CartItems = (props) => {
         TotalPrice()
     }, [cartData])
 
+
+    const Back = () => {
+        navigate(-1);
+    }
     if (cartData.length === 0) {
         return (
             <div class='container text-center my-5'>
                 <h1>Your cart is empty</h1>
-                <NavLink href='/home'><p>Go back..</p></NavLink>
+                <h4 onClick={Back} style={{ cursor: 'pointer' }}>Go back..</h4>
             </div>
         )
     }
+
+
     return (
         <div class='container'>
+            <BrandingHeader />
+
             <h1 className='text-center text-success'>Shopping Cart</h1>
             <div class='row'>
                 <div class='col md-4'>
