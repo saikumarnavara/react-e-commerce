@@ -35,7 +35,9 @@ const ViewProduct = () => {
       autoClose: 2000
     })
   }
-
+  const CompareItem = () => {
+    navigate('/compare')
+  }
   const currentDate = new Date()
   const deliveryDate = new Date(currentDate);
   deliveryDate.setDate(currentDate.getDate() + 4)
@@ -87,7 +89,7 @@ const ViewProduct = () => {
                     <button class="btn btn-outline-primary btn-lg" style={{ marginRight: '5px' }}>Buy Now</button>
                     {cartId.includes(product.id) ? <button className='btn btn-outline-primary btn-lg' onClick={() => { navigate('/cart') }}>Go to cart</button> :
                       <button class='btn btn-outline-primary btn-lg' onClick={() => AddCartItem(product.id)} style={{ marginRight: '5px' }}>Add to cart</button>}
-                    <button class="btn btn-outline-primary btn-lg" >Compare Product</button>
+                    <button class="btn btn-outline-primary btn-lg" onClick={CompareItem}>Compare Product</button>
                   </div>
                 </div>
               </div>
