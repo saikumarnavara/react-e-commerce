@@ -2,7 +2,7 @@ import { Box, MenuItem, Modal } from '@mui/material'
 import React, { useContext, useEffect, useState } from 'react'
 import { viewItem, store } from '../../../App'
 const ProductCompare = () => {
-    const [viewProduct] = useContext(viewItem)
+    const [viewProduct, setViewProduct] = useContext(viewItem)
     const [data] = useContext(store)
     const item = viewProduct;
     const Products = data;
@@ -46,6 +46,15 @@ const ProductCompare = () => {
     useEffect(() => {
         SetComparsionData();
     }, [selectedOption])
+
+    useEffect(() => {
+        const getLocalStorageData = localStorage.getItem('viewId')
+        if (getLocalStorageData) {
+            setViewProduct(parseInt(getLocalStorageData))
+        }
+    }, [])
+    console.log(viewProduct, 'sai')
+
     return (
         <div style={{ marginTop: '120px' }}>
             <h1>compare screen</h1>

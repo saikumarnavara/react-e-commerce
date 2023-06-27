@@ -11,10 +11,10 @@ const ViewProduct = () => {
   const navigate = useNavigate();
   const [clickedId, setClickedId] = useState([])
   const [cartId, setCardId,] = useContext(cartStore)
-  const [viewProduct] = useContext(viewItem)
+  const [viewProduct, setViewProduct] = useContext(viewItem)
   const [data] = useContext(store)
   const productsData = data;
-  const ItemId = viewProduct
+  const ItemId = viewProduct;
   const img = []
   const [image, setImage] = useState(img)
 
@@ -38,6 +38,13 @@ const ViewProduct = () => {
   const CompareItem = () => {
     navigate('/compare')
   }
+
+  useEffect(() => {
+    const getLocalStorageData = localStorage.getItem('viewId')
+    if (getLocalStorageData) {
+      setViewProduct(parseInt(getLocalStorageData))
+    }
+  }, [])
   const currentDate = new Date()
   const deliveryDate = new Date(currentDate);
   deliveryDate.setDate(currentDate.getDate() + 4)

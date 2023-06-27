@@ -22,6 +22,7 @@ const CartItems = (props) => {
             autoClose: 2000
         })
     }
+
     useEffect(() => {
         setCardId(cartData)
 
@@ -56,6 +57,7 @@ const CartItems = (props) => {
             </div>
         )
     }
+
 
 
     return (

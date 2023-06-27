@@ -15,6 +15,8 @@ const MenCards = (props) => {
     const AddCartItem = (props) => {
         setClickedId([...clickedId, props])
         setCardId([...cartId, props])
+        localStorage.setItem('cartIds', [...cartId, props])
+
 
         toast('Item Added to cart', {
             type: 'success',
@@ -25,10 +27,13 @@ const MenCards = (props) => {
     }
     const ViewProduct = (id) => {
         setViewProduct(id)
+        localStorage.setItem('viewId', id)
         navigate('/viewproduct')
     }
 
-    console.log(cartId, 'trhis add cart')
+
+
+    console.log((cartId), 'trhis add cart')
     console.log(viewProduct, 'sta')
     return (
         <div style={{ marginTop: '140px' }}>
@@ -52,7 +57,6 @@ const MenCards = (props) => {
                                     </div>
                                     {cartId.includes(item.id) ? <div><button className='btn btn-primary' onClick={() => { navigate('/cart') }}>Go to cart</button> <p style={{ marginBottom: '2px' }}>Item added to cart</p></div> :
                                         <button class='btn btn-primary' onClick={() => AddCartItem(item.id)}>Add to cart</button>}
-
                                 </div>
                             </div>
                         </div>

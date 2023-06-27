@@ -26,7 +26,6 @@ function App() {
   const ContextValues = [data, setData, menData, setMenData]
   const CartValues = [cartId, setCardId,]
   const viewProductVal = [viewProduct, setViewProduct]
-  console.log(viewProduct, 'app')
 
   return (
     <div className="App">

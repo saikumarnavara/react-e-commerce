@@ -24,6 +24,7 @@ const HomeFurnicards = (props) => {
     }
     const ViewProduct = (id) => {
         setViewProduct(id)
+        localStorage.setItem('viewId', id)
         navigate('/viewproduct')
     }
     return (
