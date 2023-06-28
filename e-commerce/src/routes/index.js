@@ -8,6 +8,7 @@ import BeautyScreen from "../Components/Screens/BeautyScreen";
 import HomeFurnitureScreen from "../Components/Screens/HomeFurnitureScreen";
 import ViewProduct from "../Components/Screens/ViewProductScreen";
 import ProductCompare from "../Components/Containers/ProductCompare/ProductCompare";
+import GroceryScreen from "../Components/Screens/GroceryScreen";
 import Cart from "../Components/Screens/Cart";
 const routes = (
     <React.Fragment>
@@ -21,6 +22,7 @@ const routes = (
             <Route path="/viewproduct" element={<ViewProduct />} />
             <Route path="/compare" element={<ProductCompare />} />
             <Route path="/homefurniture" element={<HomeFurnitureScreen />} />
+            <Route path="/grocery" element={<GroceryScreen />} />
         </Routes>
     </React.Fragment>
 )
