@@ -49,6 +49,11 @@ const CartItems = (props) => {
     const Back = () => {
         navigate(-1);
     }
+    const removeItemfromCart = (item) => {
+        const CartItem = cartData.filter((id) => id !== item)
+        setCartData(CartItem)
+    }
+
     if (cartData.length === 0) {
         return (
             <div class='container text-center my-5'>
@@ -58,6 +63,15 @@ const CartItems = (props) => {
         )
     }
 
+    //write  a functionaly f increase quantity in cart page ....testing code
+    const IncreaseCartItem = (item) => {
+        const CartItem = cartData.filter((id) => id !== item)
+        setCartData(CartItem)
+    }
+    const DecreaseCartItem = (item) => {
+        const CartItem = cartData.filter((id) => id !== item)
+        setCartData(CartItem)
+    }
 
 
     return (
@@ -88,6 +102,11 @@ const CartItems = (props) => {
                                                     {product.discountPercentage}% off
                                                 </div>
                                                 <div className='col d-flex flex-column justify-content-center'>
+                                                    {/* write a logic to increase the cart value */}
+                                                    <button onClick={() => { setCartData([...cartData, product.id]) }}>+</button>
+                                                    <button onClick={() => { removeItemfromCart(product.id) }}>-</button>
+                                                </div>
+                                                <div className='col d-flex flex-column justify-content-center'>
                                                     <h3 onClick={() => { RemoveCartItems(product.id) }}><AiFillDelete /></h3>
                                                 </div>
                                             </div>
@@ -116,3 +135,5 @@ const CartItems = (props) => {
 }
 
 export default CartItems
+
+

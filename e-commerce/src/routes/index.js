@@ -10,6 +10,7 @@ import ViewProduct from "../Components/Screens/ViewProductScreen";
 import ProductCompare from "../Components/Containers/ProductCompare/ProductCompare";
 import GroceryScreen from "../Components/Screens/GroceryScreen";
 import Cart from "../Components/Screens/Cart";
+import WishList from "../Components/Screens/WishList";
 const routes = (
     <React.Fragment>
         <Routes>
@@ -23,6 +24,7 @@ const routes = (
             <Route path="/compare" element={<ProductCompare />} />
             <Route path="/homefurniture" element={<HomeFurnitureScreen />} />
             <Route path="/grocery" element={<GroceryScreen />} />
+            <Route path="/wishlist" element={<WishList />} />
         </Routes>
     </React.Fragment>
 )
